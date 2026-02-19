@@ -27,7 +27,7 @@ body {
   padding: 4rem clamp(1rem, 5vw, 100px);
   margin: 0;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   max-width: 50%;
 }
 
@@ -42,12 +42,12 @@ body {
   position:relative;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 999;
 }
 
 .button-container {
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
 
   display: flex;
   justify-content: space-around; 
@@ -81,12 +81,9 @@ body {
 }
 
 footer {
-    position: fixed;
-    margin-top: 100%;
     background-color: #333;
     color: #fff;
     text-align: center;
-    position: relative;
     z-index: 1;
 }
 
@@ -113,6 +110,7 @@ a:hover {
 .hero-section {
     position: relative;
     width: 100%;
+    height: 100vh;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -204,7 +202,7 @@ a:hover {
     top: 130px;
     background: rgba(255, 255, 255);
     border-radius: 16px;
-    z-index: 2;
+    z-index: 0;
 }
 
 
@@ -250,12 +248,147 @@ a:hover {
     bottom: 100px;
 }
 
-
 a {
-  color: #1d85ab;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  color: #ffffff;
+  transition: color .3s ease-in-out, filter .3s ease-in-out;
 }
 a:hover {
   color: white;
-  box-shadow: inset 200px 0 0 0 #1d85ab;
+  z-index: 1;
+  filter: drop-shadow(0 0 0.5rem #808080);
+}
+
+.presentation-section {
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem clamp(2rem, 8vw, 8rem);
+  position: relative;
+}
+
+.presentation-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 20, 0.55);
+  z-index: 0;
+}
+
+.presentation-glass {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 4px;
+  padding: 3rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.presentation-glass::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  border-radius: 4px 4px 0 0;
+}
+
+.presentation-content h2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.presentation-content p {
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+
+}
+
+.cards-section {
+  display: flex;
+  gap: 2rem;
+  padding: 5rem clamp(2rem, 6vw, 6rem);
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-card {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 300px;
+  min-height: 230px;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+
+.nav-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  z-index: 2;
+}
+
+.nav-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+  color: #ffffff;
+  filter: none;
+}
+
+.card-glass-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.8rem;
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem 0;
+  color: #ffffff;
+}
+
+.card-body p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  margin: 0;
 }
