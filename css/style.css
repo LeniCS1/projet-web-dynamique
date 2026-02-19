@@ -1,46 +1,48 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: #ffffff;
+  color: #ffffff;
   margin: 0;
-
-  
 }
+
 
 .background-image {
   position: absolute;
   left: 0;
   right: 0;
-  z-index: -1;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 103%;
-  filter: contrast(1.1) saturate(1) brightness(0.9) ;
+  height: 100%;
+  filter: contrast(1.1) saturate(1) brightness(0.7);
 }
 
 .content {
-  padding: 4rem 1rem;
-  margin: 0 auto;
-  padding-left: 100px;
-  margin-right: 700px;
-  
+  padding: 4rem clamp(1rem, 5vw, 100px);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  max-width: 50%;
 }
 
 .logo {
-  width: 150px;
+  width: clamp(80px, 10vw, 150px);
   height: auto;
   z-index: 9999;
 }
 
 
 .container {
-  position:absolute;
+  position:relative;
+  height: 100%;
+  width: 100%;
   z-index: 1;
-  height: 100px;
-  
 }
 
 .button-container {
@@ -55,7 +57,7 @@ body {
   width: 100%;
 
 
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
   font-weight: 600;
   text-align: center;
   color: #000;
@@ -64,9 +66,18 @@ body {
 }
 
 .container_titre {
-  font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #ffffff;
+}
+
+.container_titre h1 {
+  font-size: clamp(6.5rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+}
+
+.container_titre p {
+  font-size: clamp(2.85rem, 1.5vw, 1.1rem);
 }
 
 footer {
@@ -82,10 +93,30 @@ footer {
 p {
   margin-bottom: 1.5rem;
   margin-top: auto;
+  font-size: 100%;
 }
 
-a{
+a {
     z-index: 9999;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 
@@ -140,4 +171,3 @@ a{
 	width: 0.8rem;
 	height: 100%
 }
-
