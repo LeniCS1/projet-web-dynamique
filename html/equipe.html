@@ -8,6 +8,9 @@
         <style>
             body {
                 background-color:rgb(20, 50, 105);
+                background-image: url('../img/campus.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         </style>
     </head>
@@ -30,23 +33,61 @@
                     </div>
                 </div>
             </div>
-        </header>
-        <br><br><br>
+        </header><br><br><br><br><br><br>
 
-        <fieldset>
-            <legend>Contactez-nous</legend>
-            <form>
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="firstname">Prénom :</label>
-                <input type="text" id="firstname" name="firstname" required><br><br>
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message :</label><br>
-                <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
-                <input type="submit" value="Envoyer">
-            </form>
-        </fieldset>
+        <div class="teampres">
+            <div class="presentation-content">
+                <h2>Notre équipe</h2>
+                <p>
+                    Notre équipe est composée de professionnels passionnés et dévoués, spécialisés dans divers domaines de l'informatique.<br> 
+                    Nous sommes là pour vous accompagner dans vos projets, répondre à vos questions et vous fournir le support nécessaire pour réussir dans vos études et vos activités numériques.
+                </p>
+            </div>
+        
+
+            <div >
+                <table class="team-members">
+                    <th>
+                        <div class="team-member-meunier">
+                            <img src="../img/meunier.jpg" width="400px" style="border-radius: 50%;"">
+                            <h3>Frédéric Meunier</h3>
+                            <p>Directeur général de l'Efrei</p>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="team-member-badra">
+                            <img src="../img/badra.jpg" width="400px" style="border-radius: 50%;">
+                            <h3>Riham Badra</h3>
+                            <p>Professeur</p>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="team-member-lussiez">
+                            <img src="../img/lussiez.jpg" width="400px" style="border-radius: 50%;">
+                            <h3>Julien Lussiez</h3>
+                            <p>Responsable de formation</p>
+                        </div>
+                    </th>
+                </table>
+            </div>
+        </div>
+
+        <section class="formulaire">
+            <fieldset>
+                <legend>Contactez-nous</legend>
+                <form>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="firstname">Prénom :</label>
+                    <input type="text" id="firstname" name="firstname" required><br><br>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="message">Message :</label><br>
+                    <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </fieldset>
+        </section>
 
         <footer>   
             <br>
