@@ -257,6 +257,8 @@ a:hover {
     bottom: 1%;
 }
 
+/* --------------------------------------------------- */
+
 a {
   color: #ffffff;
   transition: color .3s ease-in-out, filter .3s ease-in-out;
@@ -464,3 +466,24 @@ a:hover {
   line-height: 1.65;
   margin: 0;
 }
+
+
+/* --------------------- */
+/* ----- page info ----- */
+/* --------------------- */
+
+
+.page-fond-info {
+    margin: 0;
+    height: auto;
+    padding: 0;
+    background-image: url('../img/cour.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ressource{
+  color: rgba(255,255,255,0.9);
+}/* padding-left: 2rem; */
