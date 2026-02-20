@@ -1,33 +1,127 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>cours</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
+<head>
+    <title>Cours & Informations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
-    <body>
-        <header>
-            <img src="../img/efreilogo.png" alt="Logo de l'Efrei">
-                <nav>
-                    <ul>
-                        <li><a href="accueil.html">Accueil</a></li>
-                        <li><a href="apropos.html">A propos</a></li>
-                        <li><a href="cours.html">Cours</a></li>
-                        <li><a href="equipe.html">Contact</a></li>
-                    </ul>
-                </nav>
-        </header>
+<body class="page-fond-info">
+    <header>
+        <div class="container">
+            <div class="button-container">
+                <div class="glass-effect-backdrop"></div>     
+                <img src="../img/efreilogo.png" alt="Logo de l'Efrei" class="logo">                 
+                <a href="accueil.html">Accueil</a>
+                <a href="apropos.html">A propos</a>
+                <a href="cours.html">Cours & Informations</a>
+                <a href="equipe.html">Equipe</a>
+                <div class="glass-container">
+                    <div class="glass-effect top"></div>
+                    <div class="glass-effect bottom"></div>
+                    <div class="glass-effect left"></div>
+                    <div class="glass-effect right"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="page-fond-info"></div>
+        <section class="content">
+            <div class="container_titre">
+                <h1>Cours & <br>informations</h1>
+                <p>ressources pédagogiques et informationss</p>
+            </div> 
+        </section>  
+    </section>
 
 
-        <footer>   
-            <br>
-            <p>&copy; 2024 Efrei Paris. Tous droits réservés.</p>
-            <p>Contactez-nous : <a href="mailto:contact@efrei.fr">contact@efrei.fr</a></p>
-            <a href="apropos.html">A propos</a>
-        </footer>
-    </body>
-        
+    <section class="presentation-section">
+        <div class="presentation-glass">
+            <div class="presentation-content">
+                <h2>Ressources Pédagogiques</h2>
+                <p>
+                    L'EFREI mes plusieur type de ressource pédagogique à la disposition de ses élèves, cours, tutoriels,
+                    pour les aidé dans leur matières.
+                </p>
+                <ul>
+                    <li><strong>TP :</strong> En présentiel ou distentiel</li>
+                    <li><strong>Diaporama :</strong> Cours théoriques</li>
+                    <li><strong>Tutoriels :</strong> vidéo, consigne ...</li>
+                </ul>
+                <p><strong><a href="https://moodle.myefrei.fr/login/index.php" style="color: #0efffb;">ressource sur Moodle</a></strong></p>
+            </div>
+        </div>
+    </section>
 
+    <section class="presentation-section">
+        <div class="presentation-glass">
+            <div class="presentation-content">
+                <h2>Emplois du Temps</h2>
+                <p>Consultez les différents emploi du temps.</p>
+                
+                <div style="display: grid; gap: 1rem; margin: 2rem 0;">
+                    <a href="https://www.myefrei.fr/portal/student/planning" class="nav-card">
+                        <div class="card-body">
+                            <h3>Emploi du temps scolaire</h3>
+                            <p>l'emploi du temps peut être télècharger</p>
+                        </div>
+                    </a>
+                    <a href="https://www.myefrei.fr/portal/common/calendars" class="nav-card">
+                        <div class="card-body">
+                            <h3>Emploi du temps FabLab</h3>
+                            <p>Emploi du temps des permanences au FabLab</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="presentation-section">
+        <div class="presentation-glass">
+            <div class="presentation-content">
+                <h2>Informations Pratiques</h2>
+                <p>Voici un petit résumer des informations et des application que nous utilisons</p>
+                
+                <div>
+                    <div>
+                        <h3>Application</h3>
+                        <ul>
+                            <li><a href="https://moodle.myefrei.fr/login/index.php">Moodle</a></li>
+                            <li><a href="https://www.microsoft.com/fr-fr/microsoft-teams/log-inTeams">teams</a></li>
+                            <li><a href="https://auth.myefrei.fr/uaa/interaction/UInzt5_e2xSRTlvxW2VEe">MyEfrei</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Quelques chiffres</h3>
+                        <ul>
+                            <li>Pays : implenté dans 46 pays</li>
+                            <li>Etudiant : 6000 étudiants</li>
+                            <li>Alumni : 16 000 alumni</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>info campus</h3>
+                        <ul>
+                            <li>Horaires : 8h-20h</li>
+                            <li>Email : service.informatique@efrei.net</li>
+                            <li>adresse : 30-32 Av. de la République, 94800 Villejuif</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>   
+        <br>
+        <p>&copy; 2024 Efrei Paris. Tous droits réservés.</p>
+        <p>Contactez-nous : <a href="mailto:service.informatique@efrei.net">service.informatique@efrei.net</a></p>
+        <a href="apropos.html">A propos</a>
+    </footer>
+</body>
 </html>

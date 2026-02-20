@@ -174,10 +174,12 @@ a:hover {
 /* ----- ce que j'ai rajouter pour la page "a propos de nous" et les lien ----- */
 /* ---------------------------------------------------------------------------- */
 
+
 .page-fond {
     margin: 0;
+    height: auto;
     padding: 0;
-    background-image: url('../img/fond.jpg');
+    background-image: url('../img/01.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -187,22 +189,28 @@ a:hover {
 
 
 .azerty {
+    display: flex;
     position: relative;
     height: 100vh;
-    padding: 0;
+    padding: 2rem 1rem;
     margin: 0;
 }
 
 .block {
     position: absolute;
     width: 300px;
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     top: 130px;
     background: rgba(255, 255, 255);
     border-radius: 16px;
-    z-index: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.06); /* Transparent comme header */
+    border: 1px solid rgba(255, 255, 255, 0.014);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
 
@@ -233,6 +241,7 @@ a:hover {
 
 .block.haut-gauche {
     left: 5%;
+    top: -5%;
 }
 
 .block.centre {
@@ -245,8 +254,10 @@ a:hover {
 .block.bas-droite {
     right: 5%;
     top: auto;
-    bottom: 100px;
+    bottom: 1%;
 }
+
+/* --------------------------------------------------- */
 
 a {
   color: #ffffff;
@@ -256,6 +267,69 @@ a:hover {
   color: white;
   z-index: 1;
   filter: drop-shadow(0 0 0.5rem #808080);
+}
+
+@media screen and (max-width: 1024px) {
+    .azerty {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .block {
+        position: static;
+        width: 90vw;
+        max-width: 350px;
+        height: 450px;
+        margin: 0 auto;
+        transform: none !important;
+    }
+    
+
+    .block.bas-droite {
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+
+    .block.centre {
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+
+    .block.haut-gauche {
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .block {
+        width: 95vw;
+        height: 400px;
+    }
+    
+    .block-image {
+        height: 35%;
+    }
+    
+    .block-text {
+        padding: 1rem;
+    }
+    
+    .nom {
+        font-size: 1.2rem;
+    }
 }
 
 .presentation-section {
@@ -392,3 +466,24 @@ a:hover {
   line-height: 1.65;
   margin: 0;
 }
+
+
+/* --------------------- */
+/* ----- page info ----- */
+/* --------------------- */
+
+
+.page-fond-info {
+    margin: 0;
+    height: auto;
+    padding: 0;
+    background-image: url('../img/cour.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ressource{
+  color: rgba(255,255,255,0.9);
+}/* padding-left: 2rem; */
