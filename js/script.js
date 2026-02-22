@@ -17,7 +17,7 @@ function formend() {
         form.reset();
         fieldset.style.display = 'none';
         retryBtn.style.display = 'block';
-        alert("Merci pour votre message !");
+        alert("Merci pour votre participation !");
     } else {
         form.reset();
     }
