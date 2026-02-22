@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="../js/script.js"></script>
         <style>
             body {
                 background-color:rgb(20, 50, 105);
@@ -73,9 +74,9 @@
         </div>
 
         <section class="formulaire">
-            <fieldset>
+            <fieldset id="form-container">
                 <legend>Contactez-nous</legend>
-                <form>
+                <form id="contact-form">
                     <label for="name">Nom :</label>
                     <input type="text" id="name" name="name" required><br>
                     <label for="firstname">Prénom :</label>
@@ -84,9 +85,14 @@
                     <input type="email" id="email" name="email" required><br><br>
                     <label for="message">Message :</label><br>
                     <textarea id="message" name="message" rows="5" cols="30" required></textarea><br><br>
-                    <input type="submit" value="Envoyer">
+                    <input id="submit-btn" type="submit" onclick="IsFormComplete() && formend()" value="Envoyer">
                 </form>
             </fieldset>
+
+            <div id="retrybtn">
+                <button id="btnnouvelessai" onclick="resetForm()">Refaire le formulaire</button>
+            </div>
+
         </section>
 
         <footer>   
